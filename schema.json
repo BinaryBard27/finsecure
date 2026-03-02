@@ -1,0 +1,32 @@
+{
+  "DATABASE_URL": {
+    "required": true,
+    "type": "url",
+    "non_empty": true
+  },
+  "JWT_SECRET_KEY": {
+    "required": true,
+    "non_empty": true
+  },
+  "AES_ENCRYPTION_KEY": {
+    "required": true,
+    "non_empty": true
+  },
+  "APP_ENV": {
+    "required": true,
+    "enum": ["dev", "staging", "prod"]
+  },
+  "PORT": {
+    "required": false,
+    "type": "int",
+    "range": {"min": 1024, "max": 65535}
+  },
+  "FRAUD_SCORE_THRESHOLD": {
+    "required": false,
+    "type": "float"
+  },
+  "MAX_TRANSFER_AMOUNT": {
+    "required": false,
+    "type": "float"
+  }
+}

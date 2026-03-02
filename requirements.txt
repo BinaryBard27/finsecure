@@ -1,0 +1,37 @@
+# ── Web Framework ────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0        # ASGI server (like gunicorn but async-native)
+
+# ── Database ─────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.30               # ORM — v2 has much cleaner async support
+asyncpg==0.29.0                  # Async PostgreSQL driver (faster than psycopg2)
+alembic==1.13.1                  # Proper versioned migrations (not AutoMigrate)
+
+# ── Auth & Security ───────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0 # JWT — maintained, supports RS256 and HS256
+passlib[bcrypt]==1.7.4           # Password hashing — bcrypt at cost 12
+cryptography==42.0.5             # AES-256-GCM encryption for account numbers
+
+# ── Validation ────────────────────────────────────────────────────────────────
+pydantic==2.7.1                  # Request/response validation (FastAPI uses this)
+pydantic-settings==2.2.1         # Settings management from env vars
+email-validator==2.1.1           # Email format validation
+
+# ── Rate Limiting ─────────────────────────────────────────────────────────────
+slowapi==0.1.9                   # Rate limiting for FastAPI (Redis-ready)
+
+# ── Fraud Detection ───────────────────────────────────────────────────────────
+numpy==1.26.4                    # Z-score, statistical anomaly detection
+scipy==1.13.0                    # Additional stats utilities
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+loguru==0.7.2                    # Structured logging — cleaner than stdlib logging
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1             # Load .env file locally
+httpx==0.27.0                    # Async HTTP client (for testing)
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==8.2.0
+pytest-asyncio==0.23.6           # Async test support
+pytest-cov==5.0.0                # Coverage reporting
