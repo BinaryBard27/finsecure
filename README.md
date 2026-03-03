@@ -189,16 +189,6 @@ make lint          # ruff + bandit security scan
 
 ---
 
-## What I'd Add in Production
-
-- **Redis** for distributed rate limiting (current in-memory doesn't scale)
-- **Alembic** versioned migrations with rollback (replacing `create_all`)
-- **RS256 JWT** for microservice-to-microservice auth
-- **MaxMind GeoIP** for country-level fraud signals
-- **Celery + Redis** for async transaction processing queue
-- **Prometheus metrics** on fraud score distributions and endpoint latency
-
----
 
 ## License
 
